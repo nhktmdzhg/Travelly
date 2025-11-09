@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainBookingLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BookingActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:background="@color/background_color"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="9dp"
+                android:text="@string/booking"
+                android:textColor="@color/text_black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/hotel_card"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_margin="18dp"
+                android:background="@drawable/card_booking"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="bookingCard"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="264dp"
+                    android:layout_margin="9dp"
+                    android:importantForAccessibility="no"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/hotel_card" />
+
+                <com.nhk.travelly.DividerView
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_margin="9dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="9dp"
+                    android:text="@string/hotel"
+                    android:textColor="@color/text_black"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transport_card"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_margin="18dp"
+                android:background="@drawable/card_booking"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="bookingCard"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="264dp"
+                    android:layout_margin="9dp"
+                    android:importantForAccessibility="no"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/transport_card" />
+
+                <com.nhk.travelly.DividerView
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_margin="9dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="9dp"
+                    android:text="@string/transport"
+                    android:textColor="@color/text_black"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/trips_card"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_margin="18dp"
+                android:background="@drawable/card_booking"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="bookingCard"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="264dp"
+                    android:layout_margin="9dp"
+                    android:importantForAccessibility="no"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/trips_card" />
+
+                <com.nhk.travelly.DividerView
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_margin="9dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="9dp"
+                    android:text="@string/trips"
+                    android:textColor="@color/text_black"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/events_card"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_margin="18dp"
+                android:background="@drawable/card_booking"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="bookingCard"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="264dp"
+                    android:layout_margin="9dp"
+                    android:importantForAccessibility="no"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/event_card" />
+
+                <com.nhk.travelly.DividerView
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_margin="9dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="9dp"
+                    android:text="@string/events"
+                    android:textColor="@color/text_black"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:background="@drawable/half_box"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:elevation="10dp"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="14dp">
+
+        <LinearLayout
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:background="@color/white"
+            android:clickable="true"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="changeTab"
+            android:orientation="horizontal"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="6dp"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:importantForAccessibility="no"
+                android:scaleType="fitXY"
+                android:src="@drawable/home_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="12"
+            android:background="@drawable/light_peach_box"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="6dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="9dp"
+                android:importantForAccessibility="no"
+                android:scaleType="fitXY"
+                android:src="@drawable/booking_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/booking"
+                android:textColor="#050505"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/noti"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:background="@color/white"
+            android:clickable="true"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:focusable="true"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:onClick="changeTab"
+            android:orientation="horizontal"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="6dp"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:importantForAccessibility="no"
+                android:scaleType="fitXY"
+                android:src="@drawable/noti_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:background="@color/white"
+            android:clickable="true"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="changeTab"
+            android:orientation="horizontal"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="6dp"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:importantForAccessibility="no"
+                android:scaleType="fitXY"
+                android:src="@drawable/account_icon" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
